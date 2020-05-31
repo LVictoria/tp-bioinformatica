@@ -11,7 +11,7 @@ my $input = Bio::SeqIO->new(
  
 # Read sequence
 while (my $sequence = $input->next_seq()) {
-    # Convert to balst sequence
+    # Convert to blast sequence
     my $blast_result = blast_sequence($sequence->seq);
     # Write blast sequence in report.blast file
     write_blast('>>../data/outputs/report.blast', $blast_result);
