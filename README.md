@@ -22,10 +22,24 @@ Es necesario que el archivo `park2.gb` se encuentre en el directorio `/data/inpu
 4. El resultado del script es la creación de un archivo en formato fasta con la secuencia de aminoácidos perteneciente a la traducción de la cadena de nucleótidos.
 
 ## **Ejercicio 2**
-### Ejecución - De forma remota
+### Ejecución - **De forma remota**
 Ejecutar el siguiente script:
 ```
 perl Ex2.pm 
+```
+Es necesario que el archivo `park2.fas` se haya generado en el ejercicio anterior en la carpeta `/data/outputs/`.
+
+
+### Ejecución - **De forma local**
+Descargar la base de datos de [ESTE LINK](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz) y descomprimirla en el directorio `/db/`.
+Luego correr el siguiente comando sobre el archivo swissprot
+```
+ncbi-blast-2.3.0+/bin/makeblastdb
+```
+
+Por último, ejecutar el siguiente script:
+```
+perl Ex2-local.pm 
 ```
 Es necesario que el archivo `park2.fas` se haya generado en el ejercicio anterior en la carpeta `/data/outputs/`.
 
