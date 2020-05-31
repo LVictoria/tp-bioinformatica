@@ -31,7 +31,7 @@ Es necesario que el archivo `park2.fas` se haya generado en el ejercicio anterio
 
 
 ### Ejecución - **De forma local**
-Descargar la base de datos de [ESTE LINK](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz) y descomprimirla en el directorio `/db/`.
+Descargar la base de datos de `ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz` y descomprimirla en el directorio `/db/`.
 Luego correr el siguiente comando sobre el archivo swissprot
 ```
 ncbi-blast-2.3.0+/bin/makeblastdb
