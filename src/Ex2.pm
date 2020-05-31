@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Bio::SeqIO;
 use Bio::Perl;
 
 # Read fasta file
@@ -12,7 +11,8 @@ my $input = Bio::SeqIO->new(
  
 # Read sequence
 while (my $sequence = $input->next_seq()) {
-    print('-------------------------------------------------');
+    # Convert to balst sequence
     my $blast_result = blast_sequence($sequence->seq);
-    write_blast('>../data/outputs/resultados-remoto.blast', $blast_result);
+    # Write blast sequence in report.blast file
+    write_blast('>>../data/outputs/report.blast', $blast_result);
 }
